@@ -1,0 +1,26 @@
+@import '@/styles/variables';
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em 1em;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+}
+
+.logo {
+  width: 100px;
+  display: flex;
+  margin-bottom: -1.5em;
+}
+
+.navLink {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
