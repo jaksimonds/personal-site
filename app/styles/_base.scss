@@ -1,9 +1,7 @@
 body {
-  background-color: $color-brown-lighter;
   margin: 0;
   overflow: hidden;
   position: relative;
-  background-image: radial-gradient($color-brown-lighter 30%, $color-brown-light 80%, $color-brown 100%);
 }
 
 main {

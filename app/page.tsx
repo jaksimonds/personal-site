@@ -1,9 +1,15 @@
-import Hero from "@/components/Hero"
+import Scene from "@/components/Scene"
+import Heading from "./components/Heading"
+
+import styles from './Page.module.scss'
 
 const Homepage = () => (
-  <div>
-    <Hero />
-  </div>
+  <Scene>
+    <div className={styles.copy}>
+      <Heading level={1}>Jackson Simonds</Heading>
+      <p>Front-end developer.</p>
+    </div>
+  </Scene>
 )
 
 export default Homepage

@@ -1,7 +1,8 @@
 @import '@/styles/variables';
 
 .container {
-  padding: 1em;
+  background-color: $color-brown-lighter;
+  background-image: radial-gradient($color-brown-lighter 30%, $color-brown-light 80%, $color-brown 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,19 +64,12 @@
 }
 
 .content {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 1em;
   box-sizing: border-box;
   position: relative;
   z-index: 2;
-}
-
-.copy {
-  position: relative;
-  text-align: center;
-  color: $color-white;
-  z-index: 1;
+  height: 100%;
 }
 
 .frame {
