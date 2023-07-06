@@ -1,17 +1,17 @@
 @import '@/styles/variables';
 
 .container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5em 1em;
-
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-  }
+  padding: 1em;
+  box-shadow: 0 0 4px $color-white;
+  background-color: $color-purple-darkest;
+  z-index: 2;
 }
 
 .logo {
@@ -20,7 +20,23 @@
   margin-bottom: -1.5em;
 }
 
+.nav {
+  width: 100%;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: .5em;
+}
+
 .navLink {
-  font-size: 1.75rem;
+  font-size: 1rem;
   font-weight: bold;
+  color: $color-white;
+  text-transform: uppercase;
+  text-decoration: none;
 }

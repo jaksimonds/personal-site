@@ -1,11 +1,8 @@
 import { gql } from '@apollo/client'
 import client from '../client'
 
-import Heading from '@/components/Heading'
+import Hero from '@/components/Hero'
 import ProjectList from '@/components/ProjectList'
-import Scene from '@/components/Scene'
-
-import styles from './Page.module.scss'
 
 const getProjects = async () => {
   const { data } = await client.query({
@@ -27,15 +24,15 @@ const getProjects = async () => {
 const ProjectsPage = async () => {
   const {projects} = await getProjects()
   return (
-    <Scene>
-      <div className={styles.content}>
-        <Heading level={1}>Projects</Heading>
-        <p>This is a collection of things i've worked on.</p>
-        <ProjectList
-          projects={projects}
-        />
-      </div>
-    </Scene>
+    <div>
+      <Hero
+        heading='Projects'
+        intro="This is a collection of things i've worked on."
+      />
+      <ProjectList
+        projects={projects}
+      />
+    </div>
   )
 }
 

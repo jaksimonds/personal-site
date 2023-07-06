@@ -2,11 +2,13 @@ body {
   margin: 0;
   overflow: hidden;
   position: relative;
+  background-color: $color-purple-darkest;
 }
 
 main {
   position: relative;
   z-index: 1;
+  margin-top: 60px;
 }
 
 .sr-only {

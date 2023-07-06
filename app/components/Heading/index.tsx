@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { grenzeGotisch } from "../../fonts"
+import { oswald } from "../../fonts"
 
 interface IHeading {
   level: number
@@ -13,7 +13,7 @@ const Heading: FC<IHeading> = ({
   children
 }) => {
   const HeadingTag = `h${level}` as keyof JSX.IntrinsicElements
-  const headingClasses = `${className} ${level < 3 ? grenzeGotisch.className : ''}`
+  const headingClasses = `${className} ${level < 3 ? oswald.className : ''}`
 
   return (
     <HeadingTag className={headingClasses}>{children}</HeadingTag>

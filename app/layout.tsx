@@ -1,5 +1,6 @@
-import Footer from '@/components/Footer'
+import Header from './components/Header'
 import { inter } from './fonts'
+
 import './styles/site.scss'
 
 interface IRootLayout {
@@ -9,6 +10,7 @@ interface IRootLayout {
 const RootLayout = ({ children }: IRootLayout) => (
   <html lang='en'>
     <body className={inter.className}>
+      <Header />
       <main>
         {children}
       </main>

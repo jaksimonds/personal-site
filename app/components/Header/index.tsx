@@ -1,18 +1,29 @@
+'use client'
+
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
-import Image from 'next/image'
+import { oswald } from 'fonts'
 import styles from './Header.module.scss'
 
 const Header = () => {
+  const pathname = usePathname()
   return (
     <header className={styles.container}>
-      <Link href='/' className={styles.logo}>
-        <span className='sr-only'>Logo link back to the homepage</span>
-        <Image src='/JakobiJobi.png' alt='' width={529} height={499} className='img-responsive' />
-      </Link>
-      <nav>
-        <ul>
+      {pathname !== '/' && (
+        <Link className={styles.navLink} href={'/'}>
+          Home
+        </Link>
+      )}
+      <nav className={styles.nav}>
+        <ul className={`${styles.list} ${oswald.className}`}>
           <li>
             <Link className={styles.navLink} href='/projects'>Projects</Link>
+          </li>
+          <li>
+            <Link className={styles.navLink} href='/about'>About</Link>
+          </li>
+          <li>
+            <Link className={styles.navLink} href='/contact'>Contact</Link>
           </li>
         </ul>
       </nav>
