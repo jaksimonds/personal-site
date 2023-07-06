@@ -7,14 +7,30 @@
   box-sizing: border-box;
   border-radius: 15px;
   color: $color-white;
+  box-shadow: 0 0 4px $color-white;
   text-decoration: none;
 
   @media (min-width: 768px) {
-    width: calc(50% - 1em);
+    width: calc(33.3333% - .6666em);
   }
 }
 
-.copy {
-  position: relative;
-  z-index: 1;
+.heading {
+  svg {
+    width: 200px;
+    max-height: 50px;
+  }
+}
+
+.content {
+  margin: .5em 0;
+}
+
+.cta {
+  color: $color-white;
+
+  svg {
+    width: 1em;
+    margin-left: .5em;
+  }
 }

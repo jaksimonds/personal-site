@@ -20,9 +20,12 @@ const ProjectList: FC<IProjectList> = ({
       {projects.length ? projects.map(project => (
         <Card
           key={project.id}
-          slug={project.slug}
+          cta={{
+            href: `/projects/${project.slug}`,
+            text: `Read case study`
+          }}
           heading={project.title}
-          excerpt={project.excerpt}
+          content={project.excerpt}
         />
       )) : ''}
     </section>

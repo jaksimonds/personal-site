@@ -17,13 +17,13 @@ const Header = () => {
       <nav className={styles.nav}>
         <ul className={`${styles.list} ${oswald.className}`}>
           <li>
-            <Link className={styles.navLink} href='/projects'>Projects</Link>
+            <Link className={`${styles.navLink} ${pathname.startsWith('/projects') ? styles.navLinkActive : ''}`} href='/projects'>Projects</Link>
           </li>
           <li>
-            <Link className={styles.navLink} href='/about'>About</Link>
+            <Link className={`${styles.navLink} ${pathname.startsWith('/about') ? styles.navLinkActive : ''}`} href='/about'>About</Link>
           </li>
           <li>
-            <Link className={styles.navLink} href='/contact'>Contact</Link>
+            <Link className={`${styles.navLink} ${pathname.startsWith('/contact') ? styles.navLinkActive : ''}`} href='/contact'>Contact</Link>
           </li>
         </ul>
       </nav>
