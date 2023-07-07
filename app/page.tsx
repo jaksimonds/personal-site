@@ -1,6 +1,12 @@
+import { Metadata } from "next"
 import Hero from "./components/Hero"
 import CardSection from "./components/CardSection"
 import TwoColumnCallout from "./components/TwoColumnCallout"
+
+export const metadata: Metadata = {
+  title: 'Jackson Simonds',
+  description: 'Front-end developer.'
+}
 
 const Homepage = () => (
   <div>
