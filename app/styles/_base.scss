@@ -1,4 +1,7 @@
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0;
   overflow-x: hidden;
   position: relative;
@@ -9,6 +12,7 @@ main {
   position: relative;
   z-index: 1;
   margin-top: 60px;
+  flex: 1;
 }
 
 .sr-only {

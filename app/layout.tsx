@@ -1,4 +1,5 @@
-import Header from './components/Header'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 import { inter } from './fonts'
 
 import './styles/site.scss'
@@ -14,6 +15,7 @@ const RootLayout = ({ children }: IRootLayout) => (
       <main>
         {children}
       </main>
+      <Footer />
     </body>
   </html>
 )

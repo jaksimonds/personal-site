@@ -14,7 +14,7 @@ const Header = () => {
           Home
         </Link>
       )}
-      <nav className={styles.nav}>
+      <nav className={styles.nav} aria-label='Main Navigation'>
         <ul className={`${styles.list} ${oswald.className}`}>
           <li>
             <Link className={`${styles.navLink} ${pathname.startsWith('/projects') ? styles.navLinkActive : ''}`} href='/projects'>Projects</Link>
