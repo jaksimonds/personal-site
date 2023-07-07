@@ -1,6 +1,6 @@
-import CardSection from "./components/CardSection"
 import Hero from "./components/Hero"
-
+import CardSection from "./components/CardSection"
+import TwoColumnCallout from "./components/TwoColumnCallout"
 
 const Homepage = () => (
   <div>
@@ -8,6 +8,9 @@ const Homepage = () => (
       heading="Jackson Simonds"
       intro="Front-end developer."
     />
+    <TwoColumnCallout />
+    <TwoColumnCallout alternate />
+    <TwoColumnCallout />
     <CardSection
       heading="Site Built Using..."
       cards={[

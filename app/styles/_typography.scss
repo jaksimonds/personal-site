@@ -52,3 +52,12 @@ small {
 p {
   margin: 0;
 }
+
+a {
+  color: $color-white;
+
+  svg {
+    width: 1em;
+    margin-left: .5em;
+  }
+}
