@@ -39,7 +39,7 @@ const Homepage = async () => {
         heading="Jackson Simonds"
         intro="Front-end developer."
       />
-      {featuredProjects?.length && featuredProjects.map((project: IProjcet, index: number) => {
+      {featuredProjects?.length ? featuredProjects.map((project: IProjcet, index: number) => {
         const {
           id,
           slug,
@@ -59,7 +59,7 @@ const Homepage = async () => {
             alternate={!!(index % 2)}
           />
         )
-      })}
+      }) : ''}
       <CardSection
         heading="Site Built Using..."
         cards={[
