@@ -4,4 +4,5 @@ export interface IProjcet {
   title: string
   excerpt: string
   url?: string
+  image?: string
 }

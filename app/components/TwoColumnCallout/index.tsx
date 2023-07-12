@@ -11,6 +11,7 @@ interface ITwocolumnCallout {
   slug: string
   url?: string
   alternate?: boolean
+  image?: string
 }
 
 const TwoColumnCallout: FC<ITwocolumnCallout> = ({
@@ -18,6 +19,7 @@ const TwoColumnCallout: FC<ITwocolumnCallout> = ({
   excerpt,
   slug,
   url,
+  image,
   alternate
 }) => (
   <section className={`${styles.section} ${alternate ? styles.sectionAlt : ''}`}>
@@ -34,9 +36,11 @@ const TwoColumnCallout: FC<ITwocolumnCallout> = ({
         </Link>
       )}
     </div>
-    <div className={styles.image}>
-      <Image className='img-responsive' src='/temporary/hiebing-homepage.png' alt='' width={1702} height={1067} />
-    </div>
+    {image && (
+      <div className={styles.image}>
+        <Image className='img-responsive' src={`/temporary/${image}`} alt='' width={1702} height={1067} />
+      </div>
+    )}
   </section>
 )
 
