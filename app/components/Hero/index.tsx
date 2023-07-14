@@ -13,7 +13,7 @@ const Hero: FC<IHero> = ({
   intro,
 }) => (
   <section className={styles.section}>
-    <div>
+    <div className={styles.copy}>
       <Heading level={1}>{heading}</Heading>
       {intro && <p>{intro}</p>}
     </div>
