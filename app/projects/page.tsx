@@ -13,6 +13,8 @@ const getProjects = async () => {
           slug
           title
           excerpt
+          url
+          year
         }
       }
     `

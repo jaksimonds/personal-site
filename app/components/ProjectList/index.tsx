@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import Card from "../Card"
+import Project from '../Project'
 import styles from './ProjectList.module.scss'
 
 interface IProjectList {
@@ -9,6 +9,7 @@ interface IProjectList {
     slug: string
     title: string
     excerpt: string
+    year: number
   }[]
 }
 
@@ -16,18 +17,18 @@ const ProjectList: FC<IProjectList> = ({
   projects = []
 }) => {
   return (
-    <section className={styles.list}>
-      {projects.length ? projects.map(project => (
-        <Card
-          key={project.id}
-          cta={{
-            href: `/projects/${project.slug}`,
-            text: `Read case study`
-          }}
-          heading={project.title}
-          content={project.excerpt}
-        />
-      )) : ''}
+    <section className={styles.section}>
+      {projects.length ? (
+        <ul className={styles.list}>
+          {projects.map(project => (
+            <li key={project.id} className={styles.listItem}>
+              <Project
+                {...project}
+              />
+            </li>
+          ))}
+        </ul>
+      ) : ''}
     </section>
   )
 }

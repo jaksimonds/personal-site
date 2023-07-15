@@ -4,7 +4,7 @@ import { Metadata } from "next"
 import Hero from "./components/Hero"
 import CardSection from "./components/CardSection"
 import TwoColumnCallout from "./components/TwoColumnCallout"
-import { IProjcet } from 'lib/types'
+import { IProject } from 'lib/types'
 
 export const metadata: Metadata = {
   title: 'Jackson Simonds',
@@ -39,7 +39,7 @@ const Homepage = async () => {
         heading="Jackson Simonds"
         intro="Front-end developer."
       />
-      {featuredProjects?.length ? featuredProjects.map((project: IProjcet, index: number) => {
+      {featuredProjects?.length ? featuredProjects.map((project: IProject, index: number) => {
         const {
           id,
           slug,
