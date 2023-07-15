@@ -8,7 +8,7 @@ const getProject = async (slug: string) => {
   const { data } = await client.query({
     query: gql`
       query GetProject($slug: String) { 
-        getProject(slug: $slug) {
+        project(slug: $slug) {
           id
           slug
           title
@@ -32,7 +32,7 @@ interface IPage {
 }
 
 const Page: FC<IPage> = async ({ params }) => {
-  const { getProject: details } = await getProject(params.slug)
+  const { project: details } = await getProject(params.slug)
   return (
     <div>
       <Heading level={1}>
