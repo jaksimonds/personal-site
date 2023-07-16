@@ -1,8 +1,12 @@
 import { gql } from '@apollo/client'
 import client from '../client'
-
+import { Metadata } from "next"
 import Hero from '@/components/Hero'
 import ProjectList from '@/components/ProjectList'
+
+export const metadata: Metadata = {
+  title: 'Projects | Jackson Simonds'
+}
 
 const getProjects = async () => {
   const { data } = await client.query({

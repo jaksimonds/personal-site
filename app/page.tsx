@@ -1,15 +1,9 @@
 import { gql } from '@apollo/client'
 import client from 'client'
-import { Metadata } from "next"
 import Hero from "./components/Hero"
 import CardSection from "./components/CardSection"
 import TwoColumnCallout from "./components/TwoColumnCallout"
 import { IProject } from 'lib/types'
-
-export const metadata: Metadata = {
-  title: 'Jackson Simonds',
-  description: 'Front-end developer.'
-}
 
 const getFeaturedProjects = async () => {
   const { data } = await client.query({

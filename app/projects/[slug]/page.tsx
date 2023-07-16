@@ -1,18 +1,21 @@
 import { gql } from '@apollo/client'
 import client from '../../client'
-
-import Heading from '@/components/Heading'
+import { Metadata } from "next"
 import { FC } from 'react'
+import Hero from '@/components/Hero'
+
 
 const getProject = async (slug: string) => {
   const { data } = await client.query({
     query: gql`
       query GetProject($slug: String) { 
         project(slug: $slug) {
-          id
-          slug
           title
-          excerpt
+          url
+          hero {
+            image
+            intro
+          }
         }
       }
       
@@ -31,13 +34,29 @@ interface IPage {
   }
 }
 
+
+export const generateMetadata = async ({ params }: IPage):Promise<Metadata> => {
+  const { project } = await getProject(params.slug)
+  return {
+    title: `Project - ${project.title} | Jackson Simonds`
+  }
+}
+
 const Page: FC<IPage> = async ({ params }) => {
-  const { project: details } = await getProject(params.slug)
+  const { project } = await getProject(params.slug)
+  const {
+    hero,
+    url,
+    title
+  } = project
   return (
     <div>
-      <Heading level={1}>
-        {details.title}
-      </Heading>
+      <Hero
+        heading={title}
+        url={url}
+        image={hero?.image}
+        intro={hero?.intro}
+      />
     </div>
   )
 }
