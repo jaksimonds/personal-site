@@ -6,9 +6,10 @@ import styles from './CardSection.module.scss'
 
 interface ICardSection {
   heading: string
+  iconCards?: boolean
   cards: {
-    id: string
-    logo?: string
+    id: number
+    name: string
     label: string
     content?: string
     cta?: {
@@ -21,6 +22,7 @@ interface ICardSection {
 
 const CardSection: FC<ICardSection> = ({
   heading,
+  iconCards,
   cards
 }) => (
   <section className={styles.section}>
@@ -30,7 +32,7 @@ const CardSection: FC<ICardSection> = ({
         {cards.map((card) => {
           const {
             id,
-            logo,
+            name,
             label,
             content,
             cta
@@ -38,9 +40,10 @@ const CardSection: FC<ICardSection> = ({
 
           return (
             <Card
-              key={id}
-              image={logo}
+              key={`${name}-${id}`}
+              iconCard={iconCards}
               srHeading
+              name={name}
               heading={label}
               content={content}
               cta={cta}

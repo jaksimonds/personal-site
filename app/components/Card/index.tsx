@@ -3,14 +3,17 @@ import { FC } from 'react'
 import Heading from '../Heading'
 import styles from './Card.module.scss'
 import Link from '@/components/Link'
+import Icon from '../Icon'
 
 interface ICard {
-  image?: string | {
+  iconCard?: boolean
+  image?: {
     src: string
     alt?: string
     width: string | number
     height: string | number
   }
+  name: string
   heading: string
   srHeading?: boolean
   content?: string
@@ -22,7 +25,8 @@ interface ICard {
 }
 
 const Card: FC<ICard> = ({
-  image,
+  iconCard,
+  name,
   heading,
   srHeading,
   content,
@@ -30,10 +34,10 @@ const Card: FC<ICard> = ({
 }) => (
   <div className={styles.card}>
     <Heading className={styles.heading} level={2}>
-      {typeof image === 'string' && srHeading ? (
+      {iconCard && srHeading ? (
         <>
           <span className='sr-only'>{heading}</span>
-          <span dangerouslySetInnerHTML={{__html: image}} />
+          <Icon name={name} />
         </>
       ) : heading}
     </Heading>
