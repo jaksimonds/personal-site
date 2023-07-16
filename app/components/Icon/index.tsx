@@ -1,7 +1,7 @@
 import { FC } from "react"
 
 interface IIcon {
-  name: 'next' | 'typescript' | 'graphql' | 'vercel' | 'github' | 'linkedin' | 'discord' | 'twitter'
+  name: string
   simple?: boolean
 }
 
