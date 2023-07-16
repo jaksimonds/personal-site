@@ -14,7 +14,7 @@ module.exports = {
       },
       {
         protocol: 'https',
-        hostname: 'personal-server-taupe.vercel.app',
+        hostname: 'api.jaksimonds.dev',
         port: '',
         pathname: '/assets/**',
       },
