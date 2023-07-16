@@ -4,6 +4,10 @@ export interface IProject {
   title: string
   excerpt: string
   url?: string
-  image?: string
+  thumbnail?: string
   year: number
+  hero?: {
+    image?: string
+    intro?: string
+  }
 }
