@@ -11,7 +11,7 @@ interface ITwocolumnCallout {
   slug: string
   url?: string
   alternate?: boolean
-  image?: string
+  thumbnail?: string
 }
 
 const TwoColumnCallout: FC<ITwocolumnCallout> = ({
@@ -19,7 +19,7 @@ const TwoColumnCallout: FC<ITwocolumnCallout> = ({
   excerpt,
   slug,
   url,
-  image,
+  thumbnail,
   alternate
 }) => (
   <section className={`${styles.section} ${alternate ? styles.sectionAlt : ''}`}>
@@ -39,9 +39,9 @@ const TwoColumnCallout: FC<ITwocolumnCallout> = ({
         </Link>
       )}
     </div>
-    {image && (
+    {thumbnail && (
       <div className={styles.image}>
-        <Image className='img-responsive' src={`/temporary/${image}`} alt='' width={1702} height={1067} />
+        <Image className='img-responsive' src={thumbnail} alt='' width={1702} height={1067} />
       </div>
     )}
   </section>

@@ -15,7 +15,7 @@ const getFeaturedProjects = async () => {
           title
           excerpt
           url
-          image
+          thumbnail
         }
       }
     `
@@ -40,7 +40,7 @@ const Homepage = async () => {
           title,
           excerpt,
           url,
-          image
+          thumbnail
         } = project
         return (
           <TwoColumnCallout
@@ -49,7 +49,7 @@ const Homepage = async () => {
             excerpt={excerpt}
             slug={slug}
             url={url}
-            image={image}
+            thumbnail={thumbnail}
             alternate={!!(index % 2)}
           />
         )
