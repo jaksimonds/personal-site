@@ -3,7 +3,7 @@ import client from '../../client'
 import { Metadata } from "next"
 import { FC } from 'react'
 import Hero from '@/components/Hero'
-
+import CardSection from "@/components/CardSection"
 
 const getProject = async (slug: string) => {
   const { data } = await client.query({
@@ -15,6 +15,17 @@ const getProject = async (slug: string) => {
           hero {
             image
             intro
+          }
+          tech {
+            id
+            name
+            label
+            content
+            cta {
+              text
+              href
+              target
+            }
           }
         }
       }
@@ -47,7 +58,8 @@ const Page: FC<IPage> = async ({ params }) => {
   const {
     hero,
     url,
-    title
+    title,
+    tech
   } = project
   return (
     <div>
@@ -57,6 +69,13 @@ const Page: FC<IPage> = async ({ params }) => {
         image={hero?.image}
         intro={hero?.intro}
       />
+      {tech?.length ? (
+        <CardSection
+          heading="Site Built Using..."
+          iconCards
+          cards={tech}
+        />
+      ) : ''}
     </div>
   )
 }
