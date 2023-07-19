@@ -10,6 +10,7 @@ interface IHero {
   url?: string
   intro?: string
   image?: string
+  simple?: boolean
 }
 
 const Hero: FC<IHero> = ({
@@ -17,8 +18,9 @@ const Hero: FC<IHero> = ({
   url,
   intro,
   image,
+  simple,
 }) => (
-  <section className={styles.section}>
+  <section className={`${styles.section} ${simple ? styles.simple : ''}`}>
     <div className={styles.copy}>
       <Heading level={1}>{heading}</Heading>
       {url ? (

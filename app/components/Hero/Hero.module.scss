@@ -11,6 +11,13 @@
   box-sizing: border-box;
 }
 
+.simple {
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 0;
+  justify-content: flex-start;
+}
+
 .link {
   display: block;
   margin: 1em 0;
