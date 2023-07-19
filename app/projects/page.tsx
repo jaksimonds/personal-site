@@ -38,6 +38,7 @@ const ProjectsPage = async () => {
       <Hero
         heading='Projects'
         intro="This is a collection of things i've worked on."
+        simple
       />
       <ProjectList
         projects={projects}
