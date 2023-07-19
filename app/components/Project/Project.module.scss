@@ -11,3 +11,16 @@
 .year {
   margin-top: .5em;
 }
+
+.tags {
+  padding: 0;
+  margin: .25em 0 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25em;
+}
+
+.excerpt {
+  margin-top: .25em;
+}

@@ -19,6 +19,10 @@ const getProjects = async () => {
           excerpt
           url
           year
+          tech {
+            id
+            label
+          }
         }
       }
     `

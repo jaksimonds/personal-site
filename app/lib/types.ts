@@ -1,3 +1,15 @@
+export interface ITech {
+  id: number
+  name: string
+  label: string
+  content?: string
+  cta?: {
+    text?: string
+    href: string
+    target?: string
+  }
+}
+
 export interface IProject {
   id: number
   slug: string
@@ -10,4 +22,5 @@ export interface IProject {
     image?: string
     intro?: string
   }
+  tech: ITech[]
 }

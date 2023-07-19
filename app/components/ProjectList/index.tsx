@@ -2,15 +2,10 @@ import { FC } from 'react'
 
 import Project from '../Project'
 import styles from './ProjectList.module.scss'
+import { IProject } from 'lib/types'
 
 interface IProjectList {
-  projects?: {
-    id: number
-    slug: string
-    title: string
-    excerpt: string
-    year: number
-  }[]
+  projects?: IProject[]
 }
 
 const ProjectList: FC<IProjectList> = ({
