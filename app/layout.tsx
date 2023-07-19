@@ -4,6 +4,7 @@ import { inter } from './fonts'
 import { Metadata } from "next"
 import { Analytics } from '@vercel/analytics/react'
 import './styles/site.scss'
+import { FC } from 'react'
 
 export const metadata: Metadata = {
   title: 'Jackson Simonds',
@@ -14,7 +15,7 @@ interface IRootLayout {
   children: any
 }
 
-const RootLayout = ({ children }: IRootLayout) => (
+const RootLayout: FC<IRootLayout> = ({ children }) => (
   <html lang='en'>
     <body className={inter.className}>
       <Header />
