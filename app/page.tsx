@@ -44,7 +44,7 @@ const Homepage = async () => {
     <div>
       <Hero
         heading="Jackson Simonds"
-        intro="Front-end developer."
+        intro="Accessibility-focused developer committed to crafting experiences that leaves no one behind."
       />
       {featuredProjects?.length ? featuredProjects.map((project: IProject, index: number) => {
         const {
@@ -64,6 +64,7 @@ const Homepage = async () => {
             url={url}
             image={thumbnail}
             alternate={!!(index % 2)}
+            {...(index === 0 ? {loading: 'eager'} : {})}
           />
         )
       }) : ''}

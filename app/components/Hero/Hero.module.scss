@@ -31,6 +31,11 @@
   margin: 1em 0;
 }
 
+.intro {
+  font-size: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+  margin-top: 1em;
+}
+
 .copy {
   max-width: 800px;
 }

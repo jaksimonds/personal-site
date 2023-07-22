@@ -31,7 +31,7 @@ const Hero: FC<IHero> = ({
           <Image className='img-responsive' src={image} alt='' width={1920} height={1080} />
         </div>
       ) : ''}
-      {intro && <p>{intro}</p>}
+      {intro && <p className={styles.intro}>{intro}</p>}
     </div>
   </section>
 )

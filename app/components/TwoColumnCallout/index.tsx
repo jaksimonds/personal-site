@@ -13,6 +13,7 @@ interface ITwocolumnCallout {
   alternate?: boolean
   image?: string
   children?: any
+  loading?: 'lazy' | 'eager'
 }
 
 const TwoColumnCallout: FC<ITwocolumnCallout> = ({
@@ -22,7 +23,8 @@ const TwoColumnCallout: FC<ITwocolumnCallout> = ({
   url,
   image,
   alternate,
-  children
+  children,
+  loading
 }) => (
   <section className={`${styles.section} ${alternate ? styles.sectionAlt : ''}`}>
     <div className={styles.copy}>
@@ -46,7 +48,7 @@ const TwoColumnCallout: FC<ITwocolumnCallout> = ({
     </div>
     {image && (
       <div className={styles.image}>
-        <Image className='img-responsive' src={image} alt='' width={1702} height={1067} />
+        <Image className='img-responsive' src={image} alt='' width={1702} height={1067} loading={loading || 'lazy'} />
       </div>
     )}
   </section>

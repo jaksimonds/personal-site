@@ -7,8 +7,9 @@ import './styles/site.scss'
 import { FC } from 'react'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://jaksimonds.dev'),
   title: 'Jackson Simonds',
-  description: 'Front-end developer.'
+  description: 'Jackson Simonds is an accessibility-focused developer committed to crafting experiences that leaves no one behind.',
 }
 
 interface IRootLayout {
@@ -18,8 +19,9 @@ interface IRootLayout {
 const RootLayout: FC<IRootLayout> = ({ children }) => (
   <html lang='en'>
     <body className={inter.className}>
+      <a className='sr-only skip-to-main' href='#main'>Skip to main content</a>
       <Header />
-      <main>
+      <main id='main'>
         {children}
       </main>
       <Footer />

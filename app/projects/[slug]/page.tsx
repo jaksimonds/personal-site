@@ -49,7 +49,8 @@ interface IPage {
 export const generateMetadata = async ({ params }: IPage):Promise<Metadata> => {
   const { project } = await getProject(params.slug)
   return {
-    title: `Project - ${project.title} | Jackson Simonds`
+    title: `Project - ${project.title} | Jackson Simonds`,
+    description: project.hero.intro || ''
   }
 }
 

@@ -32,3 +32,25 @@ main {
   max-width: 100%;
   height: auto;
 }
+
+.skip-to-main {
+  &:focus-visible {
+    margin: 0;
+    position: fixed;
+    clip: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+    overflow: auto;
+    color: $color-white;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    background-color: $color-purple-darkest;
+    outline-offset: -2px;
+    outline: 2px solid $color-white;
+  }
+}
