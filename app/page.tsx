@@ -59,10 +59,10 @@ const Homepage = async () => {
           <TwoColumnCallout
             key={id}
             heading={title}
-            excerpt={excerpt}
+            copy={excerpt}
             slug={slug}
             url={url}
-            thumbnail={thumbnail}
+            image={thumbnail}
             alternate={!!(index % 2)}
           />
         )

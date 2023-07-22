@@ -5,7 +5,7 @@ import styles from './Copy.module.scss'
 import { FC } from 'react'
 
 interface ICopy {
-  heading: string
+  heading?: string
   intro?: string
   children?: any
   link?: {

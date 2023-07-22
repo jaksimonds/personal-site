@@ -30,6 +30,45 @@
   }
 }
 
+
+.children {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+
+  li {
+    text-align: center;
+    display: flex;
+
+    a {
+      margin-top: .5em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .5em;
+    
+      svg {
+        width: 2.5em;
+        margin: 0;
+      }
+    
+      @media (min-width: 768px) {
+        flex-direction: row;
+      }
+    }
+  }
+ 
+  p {
+    margin: 1em 0;
+  }
+}
+
 .content {
   margin: .5em 0;
 }
