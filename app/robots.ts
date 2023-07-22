@@ -4,8 +4,9 @@ const robots = (): MetadataRoute.Robots => {
   return {
     rules: {
       userAgent: '*',
-      disallow: '/'
-    }
+      allow: '/'
+    },
+    sitemap: 'https://jaksimonds.dev/sitemap.xml'
   }
 }
 
