@@ -11,14 +11,13 @@ interface IError {
 }
 
 const GlobalError: FC<IError> = ({
-  error,
-  reset,
+  error
 }) => {
   useEffect(() => {
     if (error) {
       console.error(error)
     }
-  }, [])
+  }, [error])
 
   return (
     <html>

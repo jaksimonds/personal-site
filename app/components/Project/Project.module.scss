@@ -9,12 +9,12 @@
 }
 
 .year {
-  margin-top: .5em;
+  margin-top: 1em;
 }
 
 .tags {
   padding: 0;
-  margin: .25em 0 0;
+  margin: .5em 0 0;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -22,5 +22,9 @@
 }
 
 .excerpt {
-  margin-top: .25em;
+  margin-top: 1em;
+}
+
+.link {
+  margin-top: 1em;
 }

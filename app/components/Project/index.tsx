@@ -36,7 +36,7 @@ const Project: FC<IProject> = ({
     ) : ''}
     <p className={styles.excerpt}>{excerpt}</p>
     {url ? (
-      <Link href={url}>Visit</Link>
+      <Link href={url} className={styles.link}>Visit</Link>
     ) : ''}
   </div>
 )

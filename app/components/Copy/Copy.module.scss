@@ -12,6 +12,23 @@
   max-width: 700px;
 }
 
+.link {
+  margin-top: .5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5em;
+
+  svg {
+    width: 2.5em;
+    margin: 0;
+  }
+
+  @media (width >= 768px) {
+    flex-direction: row;
+  }
+}
+
 .children {
   ul {
     margin: 0;
@@ -39,7 +56,7 @@
         margin: 0;
       }
     
-      @media (min-width: 768px) {
+      @media (width >= 768px) {
         flex-direction: row;
       }
     }
@@ -47,22 +64,5 @@
  
   p {
     margin: 1em 0;
-  }
-}
-
-.link {
-  margin-top: .5em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: .5em;
-
-  svg {
-    width: 2.5em;
-    margin: 0;
-  }
-
-  @media (min-width: 768px) {
-    flex-direction: row;
   }
 }

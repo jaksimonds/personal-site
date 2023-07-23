@@ -9,14 +9,13 @@ interface IError {
 }
 
 const Error: FC<IError> = ({
-  error,
-  reset,
+  error
 }) => {
   useEffect(() => {
     if (error) {
       console.error(error)
     }
-  }, [])
+  }, [error])
 
   return (
     <>
