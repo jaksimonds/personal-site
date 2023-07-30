@@ -2,8 +2,8 @@ import { gql } from '@apollo/client'
 import client from '../../client'
 import { Metadata } from "next"
 import { FC } from 'react'
-import Hero from '@/components/Hero'
-import CardSection from "@/components/CardSection"
+import { oswald } from "fonts"
+import { Hero, CardSection } from '@jsimonds/component-library'
 
 const getProject = async (slug: string) => {
   const { data } = await client.query({
@@ -66,6 +66,7 @@ const Page: FC<IPage> = async ({ params }) => {
     <div>
       <Hero
         heading={title}
+        headingClass={oswald.className}
         url={url}
         image={hero?.image}
         intro={hero?.intro}
@@ -73,6 +74,7 @@ const Page: FC<IPage> = async ({ params }) => {
       {tech?.length ? (
         <CardSection
           heading="Site Built Using..."
+          headingClass={oswald.className}
           iconCards
           cards={tech}
         />

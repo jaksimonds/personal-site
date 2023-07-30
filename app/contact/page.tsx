@@ -1,14 +1,16 @@
-import Heading from "@/components/Heading"
-import Copy from '@/components/Copy'
-import Link from "@/components/Link"
-import Icon from "@/components/Icon"
-import Hero from "@/components/Hero"
+import { oswald } from "fonts"
+import { Hero, Copy, Link, Icon } from '@jsimonds/component-library'
 
 const ContactPage = () => (
   <div>
-    <Hero heading="Contact" simple />
+    <Hero
+      heading="Contact"
+      headingClass={oswald.className}
+      simple
+    />
     <Copy
       heading='Socials'
+      headingClass={oswald.className}
       intro='If you like what you see feel free to reach out to me on one of my socials:'
     >
       <ul>
@@ -34,6 +36,7 @@ const ContactPage = () => (
     </Copy>
     <Copy
       heading='Email'
+      headingClass={oswald.className}
       intro='You can also reach out to me directly here though note I am not actively taking new web projects.'
       link={{
         href: 'mailto:jaksimonds@gmail.com',

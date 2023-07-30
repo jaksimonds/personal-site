@@ -1,7 +1,8 @@
 import { gql } from '@apollo/client'
 import client from '../client'
 import { Metadata } from "next"
-import Hero from '@/components/Hero'
+import { oswald } from "fonts"
+import { Hero } from '@jsimonds/component-library'
 import ProjectList from '@/components/ProjectList'
 
 export const metadata: Metadata = {
@@ -37,6 +38,7 @@ const ProjectsPage = async () => {
     <div>
       <Hero
         heading='Projects'
+        headingClass={oswald.className}
         intro="This is a collection of things i've worked on."
         simple
       />

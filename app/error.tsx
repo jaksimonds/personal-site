@@ -1,7 +1,8 @@
 'use client'
 
-import Hero from '@/components/Hero'
 import { FC, useEffect } from 'react'
+import { oswald } from "fonts"
+import { Hero } from '@jsimonds/component-library'
 
 interface IError {
   error: Error
@@ -21,6 +22,7 @@ const Error: FC<IError> = ({
     <>
       <Hero
         heading='Something went wrong'
+        headingClass={oswald.className}
         intro={'An unexpected error has occured and caused the application stop.'}
       />
     </>

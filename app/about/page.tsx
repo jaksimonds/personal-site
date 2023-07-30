@@ -1,11 +1,13 @@
-import Copy from '@/components/Copy'
-import Hero from '@/components/Hero'
-import Link from '@/components/Link'
-import TwoColumnCallout from '@/components/TwoColumnCallout'
+import { oswald } from "fonts"
+import { Hero, Link, TwoColumnCallout } from '@jsimonds/component-library'
 
 const About = () => (
   <div>
-    <Hero heading='About' simple/>
+    <Hero
+      heading='About'
+      headingClass={oswald.className}
+      simple
+    />
     <TwoColumnCallout image='/me.jpg'>
       <p>Hi, my name is Jackson and thank you for checking out my website! As a developer I aim to craft unique and accessible experiences with a majority of my expertise landing in the front-end web space. During my time working at <Link href='https://www.hiebing.com/' target="_blank">Hiebing</Link> I&apos;ve worked closely with designers, animators, and other developers to help tell each brand&apos;s story.</p>
       <p>From engaging web promotions to detailed product catalogues, job searches to locators, I have had the incredible privilege to work on a wide variety of projects both big and small.</p>

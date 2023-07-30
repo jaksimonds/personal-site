@@ -1,7 +1,7 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
-import Link from '@/components/Link'
+import { Link } from '@jsimonds/component-library'
 import { oswald } from 'fonts'
 import styles from './Header.module.scss'
 

@@ -1,8 +1,7 @@
 import { gql } from '@apollo/client'
 import client from 'client'
-import Hero from "./components/Hero"
-import CardSection from "./components/CardSection"
-import TwoColumnCallout from "./components/TwoColumnCallout"
+import { oswald } from "fonts"
+import { Hero, CardSection, TwoColumnCallout } from '@jsimonds/component-library'
 import { IProject } from 'lib/types'
 
 const getPageData = async () => {
@@ -44,6 +43,7 @@ const Homepage = async () => {
     <div>
       <Hero
         heading="Jackson Simonds"
+        headingClass={oswald.className}
         intro="Accessibility-focused developer committed to crafting experiences that leaves no one behind."
       />
       {featuredProjects?.length ? featuredProjects.map((project: IProject, index: number) => {
@@ -59,6 +59,7 @@ const Homepage = async () => {
           <TwoColumnCallout
             key={id}
             heading={title}
+            headingClass={oswald.className}
             copy={excerpt}
             slug={slug}
             url={url}

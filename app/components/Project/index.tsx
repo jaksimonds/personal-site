@@ -1,10 +1,9 @@
 
 import { FC } from 'react'
-import Heading from '../Heading'
-import Link from '@/components/Link'
+import { Heading, Link, Tag } from '@jsimonds/component-library'
 import { IProject } from 'lib/types'
 import styles from './Project.module.scss'
-import Tag from '../Tag'
+import { oswald } from 'fonts'
 
 const Project: FC<IProject> = ({
   title,
@@ -15,7 +14,7 @@ const Project: FC<IProject> = ({
   tech
 }) => (
   <div className={styles.project}>
-    <Heading level={2} className={styles.heading}>
+    <Heading level={2} className={`${styles.heading} ${oswald.className}`}>
       <Link className={styles.detailsLink} href={`/projects/${slug}`}>{title}</Link>
     </Heading>
     <p className={styles.year}>Year: {year}</p>
