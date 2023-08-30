@@ -9,7 +9,7 @@ interface IError {
   reset: () => void
 }
 
-const Error: FC<IError> = ({
+const ErrorComponent: FC<IError> = ({
   error
 }) => {
   useEffect(() => {
@@ -29,4 +29,4 @@ const Error: FC<IError> = ({
   )
 }
 
-export default Error
+export default ErrorComponent

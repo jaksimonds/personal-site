@@ -1,5 +1,5 @@
 import { gql } from '@apollo/client'
-import client from 'client'
+import client from './client'
 import { oswald } from "fonts"
 import { Hero, CardSection, TwoColumnCallout } from '@jsimonds/component-library'
 import { IProject } from 'lib/types'
