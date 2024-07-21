@@ -1,0 +1,7 @@
+node_modules
+coverage
+.next
+.swc
+public
+package-lock.json
+README.md
