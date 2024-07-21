@@ -1,56 +1,56 @@
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
-  overflow-x: hidden;
-  position: relative;
-  color: $color-white;
-  background-color: $color-purple-darkest;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	margin: 0;
+	overflow-x: hidden;
+	position: relative;
+	color: $color-white;
+	background-color: $color-purple-darkest;
 }
 
 main {
-  position: relative;
-  z-index: 1;
-  margin-top: 60px;
-  flex: 1;
+	position: relative;
+	z-index: 1;
+	margin-top: 60px;
+	flex: 1;
 }
 
 .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
 }
 
 .img-responsive {
-  max-width: 100%;
-  height: auto;
+	max-width: 100%;
+	height: auto;
 }
 
 .skip-to-main {
-  &:focus-visible {
-    margin: 0;
-    position: fixed;
-    clip: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: auto;
-    height: auto;
-    overflow: auto;
-    color: $color-white;
-    z-index: 3;
-    display: flex;
-    justify-content: center;
-    padding: 1em;
-    background-color: $color-purple-darkest;
-    outline-offset: -2px;
-    outline: 2px solid $color-white;
-  }
+	&:focus-visible {
+		margin: 0;
+		position: fixed;
+		clip: auto;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: auto;
+		height: auto;
+		overflow: auto;
+		color: $color-white;
+		z-index: 3;
+		display: flex;
+		justify-content: center;
+		padding: 1em;
+		background-color: $color-purple-darkest;
+		outline-offset: -2px;
+		outline: 2px solid $color-white;
+	}
 }
