@@ -20,9 +20,12 @@ const ContactPage = () => (
 					</Link>
 				</li>
 				<li>
-					<Link href="https://twitter.com/Billy_Mays3" hideExternal>
-						<Icon name="twitter" simple />
-						Twitter
+					<Link
+						href="https://bsky.app/profile/jakobijobi.bsky.social"
+						hideExternal
+					>
+						<Icon name="bluesky" simple />
+						BlueSky
 					</Link>
 				</li>
 				<li>
