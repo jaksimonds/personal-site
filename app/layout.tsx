@@ -1,10 +1,8 @@
 import { FC } from 'react'
-import Header from '@/components/Header'
-import { Footer } from '@jsimonds/component-library'
+import { Footer, Header } from '@/components'
 import { inter } from './fonts'
 import { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react'
-import '@jsimonds/component-library/lib/index.css'
 import './styles/site.scss'
 
 export const metadata: Metadata = {

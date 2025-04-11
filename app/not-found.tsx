@@ -1,5 +1,5 @@
 import { oswald } from 'fonts'
-import { Hero } from '@jsimonds/component-library'
+import { Hero } from '@/components'
 
 const NotFound = () => (
 	<div>

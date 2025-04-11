@@ -3,7 +3,7 @@ import client from '../../client'
 import { Metadata } from 'next'
 import { FC } from 'react'
 import { oswald } from 'fonts'
-import { Hero, CardSection } from '@jsimonds/component-library'
+import { Hero, CardSection } from '@/components'
 
 const getProject = async (slug: string) => {
 	const { data } = await client.query({

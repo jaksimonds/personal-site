@@ -17,9 +17,7 @@ describe('GlobalError', () => {
 
 	test('tests default', () => {
 		const mockError = new Error('test error')
-		const { container } = render(
-			<GlobalError error={mockError} reset={jest.fn()} />,
-		)
+		const { container } = render(<GlobalError error={mockError} />)
 
 		const header = container.querySelector('header')
 		expect(header).toBeInTheDocument()

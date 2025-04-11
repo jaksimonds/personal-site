@@ -2,8 +2,7 @@ import { gql } from '@apollo/client'
 import client from '../client'
 import { Metadata } from 'next'
 import { oswald } from 'fonts'
-import { Hero } from '@jsimonds/component-library'
-import ProjectList from '@/components/ProjectList'
+import { Hero, ProjectList } from '@/components'
 
 export const metadata: Metadata = {
 	title: 'Projects | Jackson Simonds',
