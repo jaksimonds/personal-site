@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { Heading, Link, Tag } from '@jsimonds/component-library'
 import { IProject } from 'lib/types'
 import styles from './Project.module.scss'
 import { oswald } from 'fonts'
+import { Heading, Link, Tag } from '@/components'
 
 const Project: FC<IProject> = ({ title, slug, excerpt, url, year, tech }) => (
 	<div className={styles.project}>

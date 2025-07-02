@@ -2,7 +2,7 @@
 
 import { FC, useEffect } from 'react'
 import { oswald } from 'fonts'
-import { Hero } from '@jsimonds/component-library'
+import { Hero } from '@/components'
 
 interface IError {
 	error: Error

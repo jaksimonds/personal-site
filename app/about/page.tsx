@@ -1,5 +1,5 @@
 import { oswald } from 'fonts'
-import { Hero, Link, TwoColumnCallout } from '@jsimonds/component-library'
+import { Hero, Link, TwoColumnCallout } from '@/components'
 
 const About = () => (
 	<div>

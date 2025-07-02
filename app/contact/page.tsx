@@ -1,5 +1,5 @@
 import { oswald } from 'fonts'
-import { Hero, Copy, Link, Icon } from '@jsimonds/component-library'
+import { Hero, Copy, Link, Icon } from '@/components'
 
 const ContactPage = () => (
 	<div>

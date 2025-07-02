@@ -1,24 +1,10 @@
 import { render } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import ProjectPage, { generateMetadata } from './page'
-import client from '../../client'
 import { ReactElement } from 'react'
 
 describe('ProjectPage', () => {
 	test('tests default', async () => {
-		// @ts-ignore
-		client.query.mockResolvedValue({
-			data: {
-				project: {
-					hero: {},
-					url: '',
-					title: '',
-					tech: [],
-				},
-			},
-		})
-
-		//@ts-ignore
 		const Page = await ProjectPage({
 			params: {
 				slug: 'test',
@@ -29,56 +15,28 @@ describe('ProjectPage', () => {
 	})
 
 	test('tests tech render', async () => {
-		// @ts-ignore
-		client.query.mockResolvedValue({
-			data: {
-				project: {
-					hero: {},
-					url: '',
-					title: '',
-					tech: [
-						{
-							id: 1,
-							name: 'test',
-						},
-					],
-				},
-			},
-		})
-
 		const Page = await ProjectPage({
 			params: {
-				slug: 'test',
+				slug: 'culvers',
 			},
 		})
 		const { container } = render(Page as ReactElement)
 
 		const cardSection = container.querySelector('.cardSection')
 		expect(cardSection).toBeInTheDocument()
-		expect(cardSection?.childElementCount).toBe(1)
+		expect(cardSection?.childElementCount).toBe(5)
 	})
 
 	test('tests generateMetadata', async () => {
-		// @ts-ignore
-		client.query.mockResolvedValue({
-			data: {
-				project: {
-					hero: {},
-					url: '',
-					title: 'test',
-					tech: [],
-				},
-			},
-		})
-
 		const metadata = await generateMetadata({
 			params: {
-				slug: 'test',
+				slug: 'culvers',
 			},
 		})
 		expect(metadata).toEqual({
-			title: 'Project - test | Jackson Simonds',
-			description: '',
+			title: "Project - Culver's | Jackson Simonds",
+			description:
+				"Culver's is nation-wide restaurant franchise based out of Sauk City Wisconsin. Their website provides users information about their various locations, menu items, and other informative content.",
 		})
 	})
 })

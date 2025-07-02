@@ -2,12 +2,10 @@
 
 import { FC, useEffect } from 'react'
 import { oswald } from 'fonts'
-import Header from '@/components/Header'
-import { Hero, Footer } from '@jsimonds/component-library'
+import { Hero, Footer, Header } from '@/components'
 
 interface IError {
 	error: Error
-	reset: () => void
 }
 
 const GlobalError: FC<IError> = ({ error }) => {

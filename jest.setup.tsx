@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 /* eslint-disable @next/next/no-img-element */
 jest.mock('next/navigation', () => ({
 	...jest.requireActual('next/navigation'),
@@ -5,7 +6,7 @@ jest.mock('next/navigation', () => ({
 	usePathname: jest.fn(),
 }))
 
-jest.mock('@jsimonds/component-library', () => ({
+jest.mock('./app/components', () => ({
 	Hero: ({
 		heading,
 		headingClass,
@@ -52,6 +53,7 @@ jest.mock('@jsimonds/component-library', () => ({
 	Heading: ({ className, children }: { className: string; children: any }) => (
 		<h2 className={className}>{children}</h2>
 	),
+	Header: () => <header className="Header" />,
 	Tag: ({ label }: { label: string }) => <small>{label}</small>,
 	TwoColumnCallout: ({ image, children }: { image: string; children: any }) => (
 		<section className="twoColumnCallout">
@@ -61,6 +63,7 @@ jest.mock('@jsimonds/component-library', () => ({
 			<img src={image} alt="" width={0} height={0} />
 		</section>
 	),
+	Project: () => <div />,
 	ProjectList: ({
 		projects,
 	}: {
@@ -85,23 +88,20 @@ jest.mock('@jsimonds/component-library', () => ({
 			{cards?.map((card) => <div key={card?.id}>{card?.name}</div>)}
 		</section>
 	),
+	Card: () => <div />,
+	Image: ({
+		src,
+		alt,
+		width,
+		height,
+	}: {
+		src: string
+		alt: string
+		width: number
+		height: number
+	}) => <img src={src} alt={alt} width={width} height={height} />,
 	Footer: () => <footer>test footer</footer>,
 }))
-
-jest.mock('@apollo/client', () => {
-	const originalModule = jest.requireActual('@apollo/client')
-	const MockedApolloClient = jest.fn(() => {
-		return {
-			query: jest.fn(),
-			mutate: jest.fn(),
-		}
-	})
-	return {
-		__esModule: true,
-		...originalModule,
-		ApolloClient: MockedApolloClient,
-	}
-})
 
 jest.mock('@vercel/analytics/react', () => ({
 	Analytics: () => <section className="analytics"></section>,
@@ -115,3 +115,19 @@ jest.mock('next/font/google', () => ({
 		className: 'oswald',
 	})),
 }))
+
+jest.mock(
+	'next/image',
+	() =>
+		({
+			src,
+			alt,
+			width,
+			height,
+		}: {
+			src: string
+			alt: string
+			width: number
+			height: number
+		}) => <img src={src} alt={alt} width={width} height={height} />,
+)

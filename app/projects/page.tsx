@@ -1,39 +1,13 @@
-import { gql } from '@apollo/client'
-import client from '../client'
 import { Metadata } from 'next'
 import { oswald } from 'fonts'
-import { Hero } from '@jsimonds/component-library'
-import ProjectList from '@/components/ProjectList'
+import { Hero, ProjectList } from '@/components'
+import { projects } from 'lib/constants/data'
 
 export const metadata: Metadata = {
 	title: 'Projects | Jackson Simonds',
 }
 
-const getProjects = async () => {
-	const { data } = await client.query({
-		query: gql`
-			query Projects {
-				projects {
-					id
-					slug
-					title
-					excerpt
-					url
-					year
-					tech {
-						id
-						label
-					}
-				}
-			}
-		`,
-	})
-
-	return data
-}
-
 const ProjectsPage = async () => {
-	const { projects } = await getProjects()
 	return (
 		<div>
 			<Hero
