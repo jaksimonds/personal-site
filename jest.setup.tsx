@@ -103,21 +103,6 @@ jest.mock('./app/components', () => ({
 	Footer: () => <footer>test footer</footer>,
 }))
 
-jest.mock('@apollo/client', () => {
-	const originalModule = jest.requireActual('@apollo/client')
-	const MockedApolloClient = jest.fn(() => {
-		return {
-			query: jest.fn(),
-			mutate: jest.fn(),
-		}
-	})
-	return {
-		__esModule: true,
-		...originalModule,
-		ApolloClient: MockedApolloClient,
-	}
-})
-
 jest.mock('@vercel/analytics/react', () => ({
 	Analytics: () => <section className="analytics"></section>,
 }))

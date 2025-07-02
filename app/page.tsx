@@ -1,43 +1,13 @@
-import { gql } from '@apollo/client'
-import client from './client'
 import { oswald } from 'fonts'
 import { Hero, CardSection, TwoColumnCallout } from '@/components'
 import { IProject } from 'lib/types'
-
-const getPageData = async () => {
-	const { data } = await client.query({
-		query: gql`
-			query Page {
-				featuredProjects {
-					id
-					slug
-					title
-					excerpt
-					url
-					thumbnail
-				}
-				page(slug: "home") {
-					tech {
-						id
-						name
-						label
-						content
-						cta {
-							text
-							href
-							target
-						}
-					}
-				}
-			}
-		`,
-	})
-
-	return data
-}
+import { projects, pages } from 'lib/constants/data'
 
 const Homepage = async () => {
-	const { featuredProjects, page } = await getPageData()
+	const featuredProjects = projects
+		.filter((project) => project.id > projects.length - 4)
+		.sort((a, b) => b.year - a.year)
+	const page = pages.find((page) => page.slug === 'home')
 
 	return (
 		<div>

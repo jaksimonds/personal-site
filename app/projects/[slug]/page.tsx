@@ -1,62 +1,30 @@
-import { gql } from '@apollo/client'
-import client from '../../client'
 import { Metadata } from 'next'
 import { FC } from 'react'
 import { oswald } from 'fonts'
 import { Hero, CardSection } from '@/components'
-
-const getProject = async (slug: string) => {
-	const { data } = await client.query({
-		query: gql`
-			query GetProject($slug: String) {
-				project(slug: $slug) {
-					title
-					url
-					hero {
-						image
-						intro
-					}
-					tech {
-						id
-						name
-						label
-						content
-						cta {
-							text
-							href
-							target
-						}
-					}
-				}
-			}
-		`,
-		variables: {
-			slug: slug,
-		},
-	})
-
-	return data
-}
-
-interface IPage {
-	params: {
-		slug: string
-	}
-}
+import { projects } from 'lib/constants/data'
+import { IPage } from 'lib/types'
 
 export const generateMetadata = async ({
 	params,
 }: IPage): Promise<Metadata> => {
-	const { project } = await getProject(params.slug)
+	const project = projects.find((project) => project.slug === params.slug)
+
 	return {
-		title: `Project - ${project.title} | Jackson Simonds`,
-		description: project.hero.intro || '',
+		title: `Project - ${project?.title} | Jackson Simonds`,
+		description: project?.hero?.intro || '',
 	}
 }
 
 const Page: FC<IPage> = async ({ params }) => {
-	const { project } = await getProject(params.slug)
-	const { hero, url, title, tech } = project
+	const project = projects.find((project) => project.slug === params.slug)
+	const { hero, url, title, tech } = project || {
+		hero: {},
+		url: '',
+		title: '',
+		tech: [],
+	}
+
 	return (
 		<div>
 			<Hero

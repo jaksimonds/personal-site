@@ -3,11 +3,7 @@ export interface ITech {
 	name: string
 	label: string
 	content?: string
-	cta?: {
-		text?: string
-		href: string
-		target?: string
-	}
+	cta?: ICTA
 }
 
 export interface IProject {
@@ -23,4 +19,21 @@ export interface IProject {
 		intro?: string
 	}
 	tech: ITech[]
+}
+
+export interface ICTA {
+	href: string
+	text?: string
+	target?: '_blank' | '_self'
+}
+
+export interface IPageData {
+	slug: string
+	tech: ITech[]
+}
+
+export interface IPage {
+	params: {
+		slug: string
+	}
 }
