@@ -412,7 +412,7 @@ export const projects: IProject[] = [
 		thumbnail: '/assets/schneiderjobs-thumbnail.webp',
 		year: 2020,
 		hero: {
-			image: '/assets/schhneiderjobs-hero.webp',
+			image: '/assets/schneiderjobs-hero.webp',
 			intro:
 				'Schneider is an enterprise level trucking company that supports a variety of digital properties. Schneider Jobs is their primary careers site with an emphasis on driver and corporate positions across the country.',
 		},
