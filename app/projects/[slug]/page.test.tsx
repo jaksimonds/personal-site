@@ -6,9 +6,9 @@ import { ReactElement } from 'react'
 describe('ProjectPage', () => {
 	test('tests default', async () => {
 		const Page = await ProjectPage({
-			params: {
-				slug: 'test',
-			},
+			params: Promise.resolve({
+				slug: 'culvers',
+			}),
 		})
 		const { container } = render(Page as ReactElement)
 		expect(container).not.toBeEmptyDOMElement()
@@ -16,9 +16,9 @@ describe('ProjectPage', () => {
 
 	test('tests tech render', async () => {
 		const Page = await ProjectPage({
-			params: {
+			params: Promise.resolve({
 				slug: 'culvers',
-			},
+			}),
 		})
 		const { container } = render(Page as ReactElement)
 
@@ -29,9 +29,9 @@ describe('ProjectPage', () => {
 
 	test('tests generateMetadata', async () => {
 		const metadata = await generateMetadata({
-			params: {
+			params: Promise.resolve({
 				slug: 'culvers',
-			},
+			}),
 		})
 		expect(metadata).toEqual({
 			title: "Project - Culver's | Jackson Simonds",

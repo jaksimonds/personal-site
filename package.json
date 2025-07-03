@@ -12,7 +12,8 @@
 		"lint:css": "stylelint **/*.scss --fix",
 		"test": "jest",
 		"test:coverage": "jest --coverage",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"typecheck": "tsc --noEmit"
 	},
 	"author": "",
 	"license": "ISC",

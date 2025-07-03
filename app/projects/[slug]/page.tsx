@@ -1,14 +1,15 @@
 import { Metadata } from 'next'
-import { FC } from 'react'
 import { oswald } from 'fonts'
 import { Hero, CardSection } from '@/components'
 import { projects } from 'lib/constants/data'
-import { IPage } from 'lib/types'
 
 export const generateMetadata = async ({
 	params,
-}: IPage): Promise<Metadata> => {
-	const project = projects.find((project) => project.slug === params.slug)
+}: {
+	params: Promise<{ slug: string }>
+}): Promise<Metadata> => {
+	const { slug } = await params
+	const project = projects.find((project) => project.slug === slug)
 
 	return {
 		title: `Project - ${project?.title} | Jackson Simonds`,
@@ -16,8 +17,9 @@ export const generateMetadata = async ({
 	}
 }
 
-const Page: FC<IPage> = async ({ params }) => {
-	const project = projects.find((project) => project.slug === params.slug)
+const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
+	const { slug } = await params
+	const project = projects.find((project) => project.slug === slug)
 	const { hero, url, title, tech } = project || {
 		hero: {},
 		url: '',
