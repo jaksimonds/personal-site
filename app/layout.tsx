@@ -3,6 +3,7 @@ import { Footer, Header } from '@/components'
 import { inter } from './fonts'
 import { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import './styles/site.scss'
 
 export const metadata: Metadata = {
@@ -26,6 +27,7 @@ const RootLayout: FC<IRootLayout> = ({ children }) => (
 			<main id="main">{children}</main>
 			<Footer />
 			<Analytics />
+			<SpeedInsights />
 		</body>
 	</html>
 )

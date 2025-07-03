@@ -106,6 +106,9 @@ jest.mock('./app/components', () => ({
 jest.mock('@vercel/analytics/react', () => ({
 	Analytics: () => <section className="analytics"></section>,
 }))
+jest.mock('@vercel/speed-insights/next', () => ({
+	SpeedInsights: () => <section className="speed-insights"></section>,
+}))
 
 jest.mock('next/font/google', () => ({
 	Inter: jest.fn(() => ({

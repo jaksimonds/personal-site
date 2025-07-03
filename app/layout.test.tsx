@@ -30,6 +30,9 @@ describe('RootLayout', () => {
 
 		const analytics = container.querySelector('.analytics')
 		expect(analytics).toBeInTheDocument()
+
+		const speedInsights = container.querySelector('.speed-insights')
+		expect(speedInsights).toBeInTheDocument()
 	})
 
 	test('tests metadata', () => {
