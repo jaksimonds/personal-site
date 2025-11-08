@@ -1,5 +1,6 @@
 import { FC } from 'react'
-import { Footer, Header } from '@/components'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 import { inter } from './fonts'
 import { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/react'

@@ -3,6 +3,23 @@ import '@testing-library/jest-dom'
 import ProjectPage, { generateMetadata } from './page'
 import { ReactElement } from 'react'
 
+jest.mock(
+	'@/components/CardSection',
+	() =>
+		({
+			cards,
+		}: {
+			cards: {
+				id: number
+				name: string
+			}[]
+		}) => (
+			<section className="cardSection">
+				{cards?.map((card) => <div key={card?.id}>{card?.name}</div>)}
+			</section>
+		),
+)
+
 describe('ProjectPage', () => {
 	test('tests default', async () => {
 		const Page = await ProjectPage({

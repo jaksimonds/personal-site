@@ -442,9 +442,7 @@ export const pages: IPageData[] = [
 	{
 		slug: 'home',
 		tech: tech.filter((item) =>
-			['next', 'typescript', 'graphql', 'scss', 'vercel', 'github'].includes(
-				item.name,
-			),
+			['next', 'typescript', 'scss', 'vercel', 'github'].includes(item.name),
 		),
 	},
 ]

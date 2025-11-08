@@ -12,6 +12,7 @@ const customJestConfig: Config = {
 		'\\.(css|scss)$': 'identity-obj-proxy',
 		fonts: '<rootDir>/app/fonts.ts',
 		'^lib/(.*)$': '<rootDir>/lib/$1',
+		'^@/components/(.*)$': '<rootDir>/app/components/$1',
 	},
 	setupFiles: ['<rootDir>/jest.setup.tsx'],
 	testEnvironment: 'jsdom',
