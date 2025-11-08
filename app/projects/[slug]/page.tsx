@@ -1,7 +1,9 @@
 import { Metadata } from 'next'
 import { oswald } from 'fonts'
-import { Hero, CardSection } from '@/components'
+import Hero from '@/components/Hero'
+import CardSection from '@/components/CardSection'
 import { projects } from 'lib/constants/data'
+import { notFound } from 'next/navigation'
 
 export const generateMetadata = async ({
 	params,
@@ -17,6 +19,12 @@ export const generateMetadata = async ({
 	}
 }
 
+export const generateStaticParams = async () => {
+	return projects.map((project) => ({
+		slug: project.slug,
+	}))
+}
+
 const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
 	const { slug } = await params
 	const project = projects.find((project) => project.slug === slug)
@@ -25,6 +33,10 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
 		url: '',
 		title: '',
 		tech: [],
+	}
+
+	if (!project) {
+		return notFound()
 	}
 
 	return (

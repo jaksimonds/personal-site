@@ -1,5 +1,7 @@
 import { oswald } from 'fonts'
-import { Hero, CardSection, TwoColumnCallout } from '@/components'
+import Hero from '@/components/Hero'
+import CardSection from '@/components/CardSection'
+import TwoColumnCallout from '@/components/TwoColumnCallout'
 import { IProject } from 'lib/types'
 import { projects, pages } from 'lib/constants/data'
 

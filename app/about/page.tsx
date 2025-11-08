@@ -1,5 +1,7 @@
 import { oswald } from 'fonts'
-import { Hero, Link, TwoColumnCallout } from '@/components'
+import Hero from '@/components/Hero'
+import Link from '@/components/Link'
+import TwoColumnCallout from '@/components/TwoColumnCallout'
 
 const About = () => (
 	<div>

@@ -2,7 +2,9 @@
 
 import { FC, useEffect } from 'react'
 import { oswald } from 'fonts'
-import { Hero, Footer, Header } from '@/components'
+import Header from '@/components/Header'
+import Hero from '@/components/Hero'
+import Footer from '@/components/Footer'
 
 interface IError {
 	error: Error

@@ -2,7 +2,7 @@
 
 import { FC, useEffect } from 'react'
 import { oswald } from 'fonts'
-import { Hero } from '@/components'
+import Hero from '@/components/Hero'
 
 interface IError {
 	error: Error

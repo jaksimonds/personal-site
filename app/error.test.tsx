@@ -5,6 +5,23 @@ import '@testing-library/jest-dom'
 import ErrorComponent from './error'
 
 jest.mock('./components/Header', () => () => <header>test</header>)
+jest.mock(
+	'@/components/Hero',
+	() =>
+		({
+			heading,
+			headingClass,
+			simple,
+		}: {
+			heading: string
+			headingClass: string
+			simple: boolean
+		}) => (
+			<section className={`hero ${simple}`}>
+				<h1 className={headingClass}>{heading}</h1>
+			</section>
+		),
+)
 
 describe('ErrorComponent', () => {
 	beforeAll(() => {

@@ -4,276 +4,276 @@ import '@testing-library/jest-dom'
 import Icon from '.'
 
 describe('Icon', () => {
-  test('tests next icon', () => {
-    const { container } = render(<Icon name='next' />)
+	test('tests next icon', () => {
+		const { container } = render(<Icon name="next" />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests next simple icon', () => {
-    const { container } = render(<Icon name='next' simple />)
+	test('tests next simple icon', () => {
+		const { container } = render(<Icon name="next" simple />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests typescript icon', () => {
-    const { container } = render(<Icon name='typescript' />)
+	test('tests typescript icon', () => {
+		const { container } = render(<Icon name="typescript" />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests typescript simple icon', () => {
-    const { container } = render(<Icon name='typescript' simple />)
+	test('tests typescript simple icon', () => {
+		const { container } = render(<Icon name="typescript" simple />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests graphql icon', () => {
-    const { container } = render(<Icon name='graphql' />)
+	test('tests graphql icon', () => {
+		const { container } = render(<Icon name="graphql" />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests graphql simple icon', () => {
-    const { container } = render(<Icon name='graphql' simple />)
+	test('tests graphql simple icon', () => {
+		const { container } = render(<Icon name="graphql" simple />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests vercel icon', () => {
-    const { container } = render(<Icon name='vercel' />)
+	test('tests vercel icon', () => {
+		const { container } = render(<Icon name="vercel" />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests vercel simple icon', () => {
-    const { container } = render(<Icon name='vercel' simple />)
+	test('tests vercel simple icon', () => {
+		const { container } = render(<Icon name="vercel" simple />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests github icon', () => {
-    const { container } = render(<Icon name='github' />)
+	test('tests github icon', () => {
+		const { container } = render(<Icon name="github" />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests github simple icon', () => {
-    const { container } = render(<Icon name='github' simple />)
+	test('tests github simple icon', () => {
+		const { container } = render(<Icon name="github" simple />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests linkedin icon', () => {
-    const { container } = render(<Icon name='linkedin' />)
+	test('tests linkedin icon', () => {
+		const { container } = render(<Icon name="linkedin" />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests linkedin simple icon', () => {
-    const { container } = render(<Icon name='linkedin' simple />)
+	test('tests linkedin simple icon', () => {
+		const { container } = render(<Icon name="linkedin" simple />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests discord icon', () => {
-    const { container } = render(<Icon name='discord' />)
+	test('tests discord icon', () => {
+		const { container } = render(<Icon name="discord" />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests discord simple icon', () => {
-    const { container } = render(<Icon name='discord' simple />)
+	test('tests discord simple icon', () => {
+		const { container } = render(<Icon name="discord" simple />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests twitter icon', () => {
-    const { container } = render(<Icon name='twitter' />)
+	test('tests twitter icon', () => {
+		const { container } = render(<Icon name="twitter" />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests dotnet icon', () => {
-    const { container } = render(<Icon name='dotnet' />)
+	test('tests dotnet icon', () => {
+		const { container } = render(<Icon name="dotnet" />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests agilitycms icon', () => {
-    const { container } = render(<Icon name='agilitycms' />)
+	test('tests agilitycms icon', () => {
+		const { container } = render(<Icon name="agilitycms" />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests agilitycms simple icon', () => {
-    const { container } = render(<Icon name='agilitycms' simple />)
+	test('tests agilitycms simple icon', () => {
+		const { container } = render(<Icon name="agilitycms" simple />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests react icon', () => {
-    const { container } = render(<Icon name='react' />)
+	test('tests react icon', () => {
+		const { container } = render(<Icon name="react" />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests faust icon', () => {
-    const { container } = render(<Icon name='faust' />)
+	test('tests faust icon', () => {
+		const { container } = render(<Icon name="faust" />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests wpengine icon', () => {
-    const { container } = render(<Icon name='wpengine' />)
+	test('tests wpengine icon', () => {
+		const { container } = render(<Icon name="wpengine" />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests wpengine simple icon', () => {
-    const { container } = render(<Icon name='wpengine' simple />)
+	test('tests wpengine simple icon', () => {
+		const { container } = render(<Icon name="wpengine" simple />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests contentstack icon', () => {
-    const { container } = render(<Icon name='contentstack' />)
+	test('tests contentstack icon', () => {
+		const { container } = render(<Icon name="contentstack" />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests contentstack simple icon', () => {
-    const { container } = render(<Icon name='contentstack' simple />)
+	test('tests contentstack simple icon', () => {
+		const { container } = render(<Icon name="contentstack" simple />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests scss icon', () => {
-    const { container } = render(<Icon name='scss' />)
+	test('tests scss icon', () => {
+		const { container } = render(<Icon name="scss" />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests scss simple icon', () => {
-    const { container } = render(<Icon name='scss' simple />)
+	test('tests scss simple icon', () => {
+		const { container } = render(<Icon name="scss" simple />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests wordpress icon', () => {
-    const { container } = render(<Icon name='wordpress' />)
+	test('tests wordpress icon', () => {
+		const { container } = render(<Icon name="wordpress" />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests wordpress simple icon', () => {
-    const { container } = render(<Icon name='wordpress' simple />)
+	test('tests wordpress simple icon', () => {
+		const { container } = render(<Icon name="wordpress" simple />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests gitlab icon', () => {
-    const { container } = render(<Icon name='gitlab' />)
+	test('tests gitlab icon', () => {
+		const { container } = render(<Icon name="gitlab" />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests gitlab simple icon', () => {
-    const { container } = render(<Icon name='gitlab' simple />)
+	test('tests gitlab simple icon', () => {
+		const { container } = render(<Icon name="gitlab" simple />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests pantheon icon', () => {
-    const { container } = render(<Icon name='pantheon' />)
+	test('tests pantheon icon', () => {
+		const { container } = render(<Icon name="pantheon" />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests drupal icon', () => {
-    const { container } = render(<Icon name='drupal' />)
+	test('tests drupal icon', () => {
+		const { container } = render(<Icon name="drupal" />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests drupal simple icon', () => {
-    const { container } = render(<Icon name='drupal' simple />)
+	test('tests drupal simple icon', () => {
+		const { container } = render(<Icon name="drupal" simple />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests bitbucket icon', () => {
-    const { container } = render(<Icon name='bitbucket' />)
+	test('tests bitbucket icon', () => {
+		const { container } = render(<Icon name="bitbucket" />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests bitbucket simple icon', () => {
-    const { container } = render(<Icon name='bitbucket' simple />)
+	test('tests bitbucket simple icon', () => {
+		const { container } = render(<Icon name="bitbucket" simple />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests azuredevops icon', () => {
-    const { container } = render(<Icon name='azuredevops' />)
+	test('tests azuredevops icon', () => {
+		const { container } = render(<Icon name="azuredevops" />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests docker icon', () => {
-    const { container } = render(<Icon name='docker' />)
+	test('tests docker icon', () => {
+		const { container } = render(<Icon name="docker" />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests email icon', () => {
-    const { container } = render(<Icon name='email' />)
+	test('tests email icon', () => {
+		const { container } = render(<Icon name="email" />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 
-  test('tests bluesky icon', () => {
-    const { container } = render(<Icon name='bluesky' />)
+	test('tests bluesky icon', () => {
+		const { container } = render(<Icon name="bluesky" />)
 
-    const icon = container.querySelector('svg')
-    expect(icon).toBeInTheDocument()
-  })
+		const icon = container.querySelector('svg')
+		expect(icon).toBeInTheDocument()
+	})
 })

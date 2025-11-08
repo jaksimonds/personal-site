@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { oswald } from 'fonts'
-import { Hero, ProjectList } from '@/components'
+import Hero from '@/components/Hero'
+import ProjectList from '@/components/ProjectList'
 import { projects } from 'lib/constants/data'
 
 export const metadata: Metadata = {

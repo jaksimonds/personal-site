@@ -1,0 +1,6 @@
+@forward '@/styles/variables';
+@forward '@/styles/typography';
+@forward '@/styles/base';
+
+// This file acts as a central barrel for style modules.
+// Import it from other files with `@use '@/styles' as *;` or `@use './index' as *;`.

@@ -1,4 +1,4 @@
-@import '@/styles/variables';
+@use '@/styles/variables' as *;
 
 .container {
 	position: fixed;
@@ -10,7 +10,7 @@
 	align-items: center;
 	justify-content: space-between;
 	padding: 1em;
-	box-shadow: 0 0 4px $color-white;
+	box-shadow: 0 0 4px #{$color-white};
 	background-color: $color-purple-darkest;
 	z-index: 2;
 }

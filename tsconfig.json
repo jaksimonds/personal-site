@@ -4,7 +4,7 @@
 		"module": "ESNext",
 		"lib": ["ES6", "ES7", "ESNext", "DOM"],
 		"allowJs": true,
-		"jsx": "preserve",
+		"jsx": "react-jsx",
 		"strict": true,
 		"skipLibCheck": true,
 		"forceConsistentCasingInFileNames": true,
@@ -21,11 +21,16 @@
 		],
 		"baseUrl": "app/",
 		"paths": {
-			"@/styles/*": ["styles/*"],
-			"@/components": ["components"],
-			"@/components/*": ["components/*"]
+			"@/*": ["./*"],
+			"@/proxies": ["../proxies"]
 		}
 	},
-	"include": ["next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx"],
+	"include": [
+		"next-env.d.ts",
+		".next/types/**/*.ts",
+		"**/*.ts",
+		"**/*.tsx",
+		".next/dev/types/**/*.ts"
+	],
 	"exclude": ["node_modules"]
 }
